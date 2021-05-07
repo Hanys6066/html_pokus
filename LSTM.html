@@ -1,0 +1,57 @@
+<!doctype html>
+<!--
+Vytvořeno 4.5.2021 Natálií Hájkovou
+LSTM(Long-Short Term Memory neuronová síť)-->
+
+<html>
+    <head>
+		<link rel="stylesheet" href="webik.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+		<div class="navbar">
+			<a href="index.html">Domů</a>
+			<a href="zdroje.html">Zdroje</a>
+			<div class="dropdown">
+				<button class="dropbtn">Obsah 
+					 <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="Perceptron.html">Perceptron</a>
+					<a href="FeedForward.html">Dopředná síť</a>
+					<a href="RNN.html">RNN</a>
+					<a href="CNN.html">CNN</a>
+					<a href="LSTM.html">LSTM</a>
+				</div>
+			</div> 
+		</div>
+		
+		<h1> LSTM</h1>
+		<p>Long Short Term Memory, dále jen LSTM, je speciální druh zpětnovazebních neuronových sítí. LSTM je schopna se učit dlouhodobé závislosti, tedy případy, kdy je
+			aktuální výstup závislý na velmi vzdáleném dřívějším vstupu. Klasické rekurentní
+			neuronové sítě toho byly schopny pouze v teoretické rovině. Díky tomu našly LSTM
+			sítě uplatnění na širokou škálu problému. Například predikce časových řad, rozpoznání řeči a ručně psaných textů, skládání hudby a z hlediska této práce klasifikace
+			textů. ukturu zřetězených, opakujících se modulů, výjimkou není ani LSTM viz obr. 1.8. Klíčovou vlastností LSTM sítí je
+			vnitřní stav buňky, který prochází celým řetězcem a je ovlivňován pouze lineárními
+			interakcemi. Díky tomu mohou informace
+			procházet napříč řetězcem beze změn. LSTM mohou upravovat informace v jejich
+			vnitřním stavu pomocí prvků nazývaných brány. Ty se skládají z operace násobení a
+			nelineární sigmoidní funkce. Popisovaná varianta LSTM obsahuje vstupní, výstupní
+			a zapomínající bránu. Samostatná LSTM buňka vypadá následovně.
+		</p>
+		<figure>
+			<img src="pictures/LSTM_Cell.png" alt="Workplace" width="450" height="280">
+			<figcaption> Buňka LSTM</figcaption>
+		</figure>
+		<p>
+		Buňka je pak reprezentována následujícími rovnicemi
+		</p>
+		<figure>
+			<img src="pictures/LSTM_equations.png" alt="Workplace" width="450" height="280">
+			<figcaption> Definice LSTM buňky</figcaption>
+		</figure>
+		
+		
+    </body>
+</html>

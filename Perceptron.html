@@ -1,0 +1,90 @@
+<!doctype html>
+<!--
+Vytvořeno 4.5.2021 Natálií Hájkovou
+Perceptor(matematická reprezentace neuronu)-->
+
+<html>
+    <head>
+		<link rel="stylesheet" href="webik.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+		<!-- The loading of KaTeX is deferred to speed up page rendering -->
+		<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+
+		<!-- To automatically render math in text elements, include the auto-render extension: -->
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
+			onload="renderMathInElement(document.body);"></script>
+    </head>
+
+    <body>
+		<div class="navbar">
+			<a href="index.html">Domů</a>
+			<a href="zdroje.html">Zdroje</a>
+			<div class="dropdown">
+				<button class="dropbtn">Obsah 
+					 <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="Perceptron.html">Perceptron</a>
+					<a href="FeedForward.html">Dopředná síť</a>
+					<a href="RNN.html">RNN</a>
+					<a href="CNN.html">CNN</a>
+					<a href="LSTM.html">LSTM</a>
+				</div>
+			</div> 
+		</div>
+		
+		<h1> Perceptron</h1>
+		
+		<div class="row" align="center">
+			  <div class="column">
+				<figure>
+					<img src="pictures/neuron.jpg" alt="" width="480" height="280">
+					<figcaption>Neuron</figcaption>
+				</figure>
+			
+			  </div>
+			  <div class="column" align=center>
+				<figure>
+					<img src="pictures/perceptron_schema.png" width="480" height="280">
+					<figcaption>Perceptron</figcaption>
+				</figure>
+			  </div>
+		</div>
+	
+		<p>Perceptor je matematická reprezentace biologického neuronu a základní prvek neurononové sítě.
+		Stejně jako jeho biologická předloha percetron má vstupy(dendridy u neuronu), jenž přivádějí do perceptronu data. jednotlivé vstupy jsou modifikovány(násobeny) 
+		váhou(tj. číslem jenž určuje jak "významný" je daný vstup pro daný perceptron). Všechny vstupní, modifikované signály jsou sečteny a v některých případech se k této sumě ještě přičítá 
+		tzv. <b>bias</b>, jenž reprezentuje prahový potenciál perceptronu. Výsledek je pak označován jako potenciál a je přiveden na vstup akivační funkce, převádí potencál na výstup. tento přervod je nejčastěji nelineární. Existuje několik typů aktivačních funkcí viz. tabulka.		
+		</p>
+		
+		<table>
+			<tr>
+				<th>Název</th>
+				<th>Definice</th> 
+				<th>Derivace</th>
+			</tr>
+			<tr>
+				<td>Lineární</td>
+				<td> <p style="color:black;font-size:25px;">\(y=ax\)</P></td>
+				<td> <p style="color:black;font-size:25px;">\(y=a\)</P></td></td>
+			</tr>
+			<tr>
+				<td>Sigmoidní</td>
+				<td><p style="color:black;font-size:25px;">\( y = \frac {1}{1 - e^{-x}}\)</P></td>
+				<td><p style="color:black;font-size:25px;">\( y = \frac {e^x}{(1 - e^{-x})^2}\)</P></td>
+			</tr>
+			<tr>
+				<td>Tanh</td>
+				<td><p style="color:black;font-size:25px;">\( y = \frac {e^x - e^{-x}}{e^x + e^{-x}}\)</P></td>
+				<td><p style="color:black;font-size:25px;">\( y = 1 - tanh^2x\)</P></td>
+			</tr>
+		</table>
+
+</body>
+</html>
+		
+    </body>
+</html>

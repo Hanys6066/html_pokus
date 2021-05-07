@@ -1,0 +1,61 @@
+<!doctype html>
+<!--
+Vytvořeno 4.5.2021 Natálií Hájkovou
+Rekurentní neurovová síť-->
+
+<html>
+    <head>
+		<link rel="stylesheet" href="webik.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+		<div class="navbar">
+			<a href="index.html">Domů</a>
+			<a href="zdroje.html">Zdroje</a>
+			<div class="dropdown">
+				<button class="dropbtn">Obsah 
+					 <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="Perceptron.html">Perceptron</a>
+					<a href="FeedForward.html">Dopředná síť</a>
+					<a href="RNN.html">RNN</a>
+					<a href="CNN.html">CNN</a>
+					<a href="LSTM.html">LSTM</a>
+				</div>
+			</div> 
+		</div>
+		
+		<h1> Rekurentní Neuronová síť</h1>
+		<figure>
+			<img src="pictures/RNN_2.png" width="500" height="280" class="center2">
+			<figcaption> Rekurentní neuronová síť</figcaption>
+		</figure>
+		<p>Rekurentní neuronové sítě se od dopředných liší tím, že zavádí určitou formu rekurence, kdy datový tok není jen od vstupu k výstupu, ale 
+			data mohou "téci" ve zpětném směru. To znamená, že aktuální výstup neuronu již nezávisí pouze na aktuálních vsutpech, ale je ovlivněn předchozím stavem.
+			Takto síť získává schopnost "pamatovat" co bylo před aktuálním stavem. Tyto sítě se používají k úlohám jako je zpracování časových řad,
+			predikce, překlad textu, analýza textu, ...
+			Existuje mnoho typů rekurentních neuronových sítí, jako např. plně propojená rekurentní neuronová síť, GRU(Gated reccurent neural network), <a href = LSTM.html> LSTM</a>
+			(Long-short term memory).
+		</p>
+		
+		<div class="row" align="center">
+			  <div class="column">
+				<figure>
+					<img src="pictures/RNN_translation.png" alt="" width="500" height="280">
+					<figcaption>Ukázka dvou propojených rekurentních neuronových sítí pro překlad textu</figcaption>
+				</figure>
+			
+			  </div>
+			  <div class="column" align=center>
+				<figure>
+					<img src="pictures/RNN_prediction.png" width="500" height="280">
+					<figcaption>Predikce vývoje cen akcií</figcaption>
+				</figure>
+			  </div>
+		</div>
+	
+    </body>
+</html>

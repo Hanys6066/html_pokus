@@ -1,0 +1,77 @@
+<!doctype html>
+<!--
+Vytvořeno 4.5.2021 Natálií Hájkovou
+hlavní html soubor uvodní strana-->
+
+<html>
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="webik.css">
+    </head>
+	
+    <body>
+		<div class="navbar">
+			<a href="index.html">Domů</a>
+			<a href="zdroje.html">Zdroje</a>
+			<div class="dropdown">
+				<button class="dropbtn">Obsah 
+					 <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="Perceptron.html">Perceptron</a>
+					<a href="FeedForward.html">Dopředná síť</a>
+					<a href="RNN.html">RNN</a>
+					<a href="CNN.html">CNN</a>
+					<a href="LSTM.html">LSTM</a>
+				</div>
+			</div> 
+		</div>
+	
+		<h1>Neuronové sítě</h1>
+		<p>
+		Umělá neuronová síť (ANN, artificial neural network) je prostředkem pro
+		zpracování komplexních dat, využívajícím ke své práci množství propojených
+		procesorů a výpočetních cest. ANN jsou inspirovány architekturou lidského mozku;
+		jsou schopny se učit a analyzovat rozsáhlé a komplexní množiny dat, 
+		které mnohem lineárnější algoritmy jen těžko zvládnou. Neuronová síť je ve své
+		podstatě výpočetní graf, mající sadu paraemtrů jenž se musí nastavit(naučit) tak, aby 
+		síť reagovala na dané vstupy požadovaným způsobem, tj. aby generovala požadovaný výstup.
+		</p>
+		
+		<h2>Učení Neuronových sítí</h2>
+		<p>
+		Cílem učení neuronových sítí je nastavit parametry sítě tak aby síť reagoval požadovaným způsobem. V základě
+		rozlišujeme dva typy učení a to učení s učitelem a učení bez učitele. Učení s učitelem se rozumí iterativní proces, kdy 
+		síťi předkládáme vstupní terénovací data a výstup sítě je porovnáván s trénovacím výstupem a dle rozdílu se následně provede přenastavení parametrů sítě
+		(musíme tedy mít množinu trénovacích dvojic vstup-výstup). Druhý způsob (učení bez učitele) je aplikován jen na určité typy
+		neuronových sítí a vyžaduje vstupní trénovací data(ne výstupní). Přenastavení parametrů sítě je provedeno pomocí nějaké metody: shlukové analýzy,
+		evolučních algoritmů,...
+		Nejčastější metody užívané pro trénování neuronových sítí jsou metody založené na výpočtu gradient. Gradient je vektor udávající směr největší změny.
+		Toho se využívá během učení s učitelem, kdy se snažíme měnit parametry právě ve směru největší změny chyby sítě(rozdílu mezi výstupem sítě a trénovacím výstupem) 
+		při změně daného parametru. Nejběžnější z těchto meto je tzv. metoda Back-propagation(zpětná propagace), popsaná
+		<a target="_blank" rel="noopener noreferrer" href="http://neuralnetworksanddeeplearning.com/chap2.html">zde</a>
+		</p>
+		
+		<h2>Historie a typy neuronových Sítí</h2>
+		<p>
+		Jako první neuronouvou sít lze označit Perceptron, představený roku 1969 Frankem Rosenblattem.
+		Ten umožnil segmentaci vstupních dat do dvou tříd. Následovaly neúspěšné pokusy o sestavení složitých sítí, složených z těchto perceptronů, jenž
+		by umožnovaly řešit komplexnější problémy. Problémem bylo naučení těchto sítí, kvůli absenci vhodného učícího algoritmu. Proto se až do roku 1986 používaly pouze
+		jednovrstvé neuronové sítě(ty ale obsahovaly někdy i desítky neuronů) a obecně se od pouřívaní neuronových sítí upouštělo. Zlom nastal roku 1986 kdy byl úspěšně vyzkoušen algoritmus zpětného šíření
+		chyby(back propagation) pro trénování vícevrstvých neuronových sítí. I přes počáteční nadšení zde pořád byly problémy, např. síť nebyla schopná
+		realizovat paměť, také zde byly problémy se zpracování časových řad(informace není obsažena jen v datech samotných, ale také v jejich posloupnosti), zpracování obrazu(obraz obecně je 
+		reprezentován velkým množstvím, často vícedimenzionálních dat), atd. proto byly postupem času představeny recurentní neuronové sítě, jenž do jisté míry řešíily problém s pamětí a časovými řadami. Ty byly následně
+		narhazeny LSTM, GRU sítěmi. V otázce zpracování obrazu se podařilo docílit velkých úspěchů díky konvoluční neuronové síti.
+		</p>
+		
+	<img src="pictures/typy.png" alt="Workplace" usemap="#workmap" width="780" height="560" class="center">
+	<map name="workmap">
+		<area shape="rect" coords="34,0,150,220" href="Perceptron.html">
+		<area shape="rect" coords="210,0,450,220" href="FeedForward.html">
+		<area shape="rect" coords="510,0,760, 250" href="LSTM.html">
+		<area shape="rect" coords="10,280,270,530" href="RNN.html">
+		<area shape="rect" coords="410,280,770, 550" href="CNN.html">
+	</map>
+		
+    </body>
+</html>
